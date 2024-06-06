@@ -1,12 +1,19 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import Image from "next/image";
+import UserStoryItem from "../../../components/UserStoryItem";
+import FollowSuggestionItem from "../../../components/FollowSuggestionItem";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-row items-center justify-center gap-[50px] mx-4 my-10">
+    <div className="w-full h-full flex flex-row items-start justify-center gap-[45px] mx-4 my-10">
       <div className="flex flex-col">
-        <div className="flex flex-col h-max w-[480px] bg-white border border-gray-200 rounded-sm">
+        <div className="flex flex-row h-[120px] w-[480px] bg-white border border-gray-200 rounded-sm items-center justify-center gap-4">
+          <UserStoryItem user_id="hanyohanyochamchimayo" />
+          <UserStoryItem user_id="zo_glass" />
+          {/* 적용될 기술 스택 1. Stack 가장 밑에 그라데이션(애는 클릭 후에는 회색 원으로 변경), 그다음 하얀원 공백주는 느낌을 위해서, 그다음 프로필 사진, 밑에 아이디 텍스트는 특정 width 넘어가면 자동으로 ...으로 생략을 하기*/}
+        </div>
+        <div className="flex flex-col mt-7 h-max w-[480px] bg-white border border-gray-200 rounded-sm">
           <div className="flex flex-row items-center justify-between p-1">
             <div className="flex flex-row items-center justify-center">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
@@ -45,7 +52,7 @@ export default function Home() {
             <div>add a comment</div>
           </div>
         </div>
-        <div className="flex flex-col mt-10 h-max w-[480px] bg-white border border-gray-200 rounded-sm">
+        <div className="flex flex-col mt-7 h-max w-[480px] bg-white border border-gray-200 rounded-sm">
           <div className="flex flex-row items-center justify-between p-1">
             <div className="flex flex-row items-center justify-center">
               <div className="w-[40px] h-[40px] rounded-full overflow-hidden">
@@ -85,7 +92,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="user container">2</div>
+      <div id="user container" className="flex flex-col gap-2">
+        <FollowSuggestionItem />
+        <span>About ` Help</span>
+        <span>@ 2022 INSTAGRAM FROM META</span>
+      </div>
     </div>
   );
 }

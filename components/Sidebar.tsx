@@ -5,11 +5,12 @@ import { CiHeart, CiSearch } from "react-icons/ci";
 import { MdOutlineAddBox, MdOutlineExplore } from "react-icons/md";
 import { AiOutlineMessage } from "react-icons/ai";
 import Image from "next/image";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Sidebar({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-row">
-      <div className="w-[240px] h-full bg-white flex flex-col mt-3 ml-5 gap-10">
+      <div className="w-[240px] h-[100%] bg-white flex flex-col mt-3 ml-5 gap-10 border-r-2">
         <div className="flex flex-row items-center gap-2">
           <FaInstagram size={35} />
           <div className="w-[1px] h-[32px] bg-gray-300"></div>
@@ -42,6 +43,9 @@ export default function Sidebar({ children }: { children: React.ReactNode }) {
             }
             text="Profile"
           />
+        </div>
+        <div className="pb-3">
+          <NavigationItem icon={<RxHamburgerMenu size={24} />} text="More" />
         </div>
       </div>
       <div className="flex-1">{children}</div>

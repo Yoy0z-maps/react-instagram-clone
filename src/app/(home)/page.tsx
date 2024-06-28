@@ -92,10 +92,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="user container" className="flex flex-col gap-2">
+      <div
+        id="user container"
+        className="flex flex-col items-start justify-center"
+      >
+        <div className="flex flex-row items-center justify-between w-full mb-2">
+          <span className="text-gray-500">Suggestions For You</span>
+          <span className="text-[14px] font-semibold text-black">See All</span>
+        </div>
         <FollowSuggestionItem />
-        <span>About ` Help</span>
-        <span>@ 2022 INSTAGRAM FROM META</span>
+        <FollowSuggestionItem />
+        <FollowSuggestionItem />
+        <FollowSuggestionItem />
+        <FollowSuggestionItem />
+        <div className="flex flex-col items-start justify-start text-gray-300 gap-6 text-[12px] mt-6">
+          <span>
+            About · Help · Press · API · Jobs · Privacy · Terms ·<br></br>
+            Locations · Language
+          </span>
+          <span>@ 2022 INSTAGRAM FROM META</span>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export default function FollowSuggestionItem() {
   var user_id = "";
 
   return (
-    <div className="flex flex-row  h-[60px] w-[120px] p-1 items-center justify-center">
+    <div className="flex flex-row  h-[60px] w-[240px] p-1 items-center justify-between">
       <div className="flex flex-row gap-2 items-center justify-center">
         <div className="w-[45px] h-[45px] rounded-full overflow-hidden">
           <Image
@@ -16,14 +16,14 @@ export default function FollowSuggestionItem() {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap- w-[200px] h-full">
           <span className="text-[16px]">user_id</span>
           <span className="text-[12px] text-gray-500">
             {isFollowed ? `Followed by ${user_id}` : "Suggested For You"}
           </span>
         </div>
       </div>
-      <div className="text-[16px] text-blue-500">Follow</div>
+      <div className="text-[14px] text-blue-400">Follow</div>
     </div>
   );
 }
